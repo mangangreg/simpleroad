@@ -1,0 +1,5 @@
+bs4
+pymongo
+python-dotenv
+requests
+selenium>=3.141.0
