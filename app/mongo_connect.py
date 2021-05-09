@@ -1,10 +1,13 @@
 import os
+from pathlib import Path
 
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
+HERE = Path(__file__).parent
+
 class MongoConnect:
-    def __init__(self, user=None, password=None, host=None, port=None, database=None, env_file='.mongo.env'):
+    def __init__(self, user=None, password=None, host=None, port=None, database=None, env_file=HERE/'.mongo.env'):
 
         # Load the env file
         load_dotenv(env_file)
